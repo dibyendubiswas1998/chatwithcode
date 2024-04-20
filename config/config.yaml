@@ -8,6 +8,7 @@ artifacts:
   # data:
   data:
     data_dir: artifacts/data
+    github_data: artifacts/data/github
   # vector DB:
   vectordb:
     chromadb_dir: artifacts/chromadb
