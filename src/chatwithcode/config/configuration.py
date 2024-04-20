@@ -48,9 +48,26 @@ class ConfigManager:
 
         except Exception as ex:
             raise ex
+    
+
+    def get_llm_config(self) -> LLMConfig:
+        try:
+            self.llm = LLMConfig(
+                llm=self.config.model.gemini_llm,
+                temperature=self.params.gemini_llm.temperature,
+                max_length=self.params.gemini_llm.max_length,
+                json_file=self.config.artifacts.chatdata
+            )
+
+            return self.llm
+        
+        except Exception as ex:
+            raise ex
+
+
         
 
 
 if __name__ == '__main__':
     config_manager = ConfigManager()
-    print(config_manager.get_store_embedding_vectordb_config())
+    print(config_manager.get_llm_config())

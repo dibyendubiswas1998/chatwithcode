@@ -1,3 +1,7 @@
 embeddings:
   chunk_zise: 2500
   overlap: 500
+
+gemini_llm:
+  temperature: 0.4
+  max_length: 1024

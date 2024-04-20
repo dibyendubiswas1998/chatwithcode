@@ -13,8 +13,9 @@ artifacts:
   vectordb:
     chromadb_dir: artifacts/chromadb
   # chatdata:
-  chatdata: artifacts/chatdata.json
+  chatdata: artifacts/qa/chatdata.json
 
 # model:
 model:
   embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  gemini_llm: gemini-pro

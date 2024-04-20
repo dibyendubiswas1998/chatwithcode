@@ -32,3 +32,11 @@ class StoreEmbeddingVectorDBConfig:
     embedding_model_name: str
     github_dir: Path
     chromadb_dir: Path
+
+
+@dataclass(frozen=True)
+class LLMConfig:
+    llm: str
+    temperature: float
+    max_length: int
+    json_file: Path
