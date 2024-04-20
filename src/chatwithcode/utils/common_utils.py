@@ -111,50 +111,16 @@ def create_dir(dirs: list):
         raise e
 
 
-# @ensure_annotations
-def save_json_file(file_path: Path, report: dict):
-    """
-        Saves the report dictionary to a file in JSON format.
-
-        Args:
-            file_path (str): The path of the file where the report will be saved.
-            report (dict): The report data that will be written to the file.
-
-        Raises:
-            Exception: If any error occurs during the file writing process.
-
-        Example:
-            save_report('report.json', {'name': 'John', 'age': 25})
-    """
+def insert_data_tojson_file(file_path:Path, data_dct:dict):
     try:
-        with open(file_path, 'w') as f:
-            json.dump(report, f, indent=4)
+        if os.path.exists(file_path):
+                with open(file_path, 'r') as file:
+                    data = json.load(file)  # Load existing JSON data
+        else:
+            data = [] 
+        data.append(data_dct) # append the data to json file
+        with open(file_path, 'w') as file:
+                json.dump(data, file, indent=4) 
+
     except Exception as e:
         raise e
-
-
-# @ensure_annotations
-def load_json_file(file_path:Path) -> ConfigBox:
-    """
-        Load a report from a file and return a ConfigBox object.
-
-        Args:
-            file_path (Path): The path to the file containing the report.
-
-        Returns:
-            ConfigBox: A ConfigBox object representing the content of the file.
-
-        Raises:
-            Exception: If there is an error while loading the report.
-
-        Example Usage:
-            file_path = Path("report.json")
-            report = load_report(file_path)
-    """
-    try:
-        with open(file_path) as f:
-            content = json.load(f)
-        return ConfigBox(content)
-
-    except Exception as ex:
-        raise ex
