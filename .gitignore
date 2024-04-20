@@ -2,7 +2,7 @@
 documentation/word_files
 config/secrect.yaml
 artifacts/data
-
+artifacts/chromadb
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

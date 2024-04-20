@@ -14,3 +14,7 @@ artifacts:
     chromadb_dir: artifacts/chromadb
   # chatdata:
   chatdata: artifacts/chatdata.json
+
+# model:
+model:
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2

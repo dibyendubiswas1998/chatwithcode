@@ -6,10 +6,12 @@ from chatwithcode.utils.common_utils import read_params
 
 
 class ConfigManager:
-    def __init__(self, secrect_file_path=SECRET_FILE_PATH, config_file_path=CONFIG_FILE_PATH):
+    def __init__(self, secrect_file_path=SECRET_FILE_PATH, config_file_path=CONFIG_FILE_PATH, 
+                 params_file_path=PARAMS_FILE_PATH):
         
         self.secrect = read_params(secrect_file_path) # read information from config/secrect.yaml file
         self.config = read_params(config_file_path) # read information from config/config.yaml file
+        self.params = read_params(params_file_path) # read information from config/params.yaml file
     
 
     def get_github_url_ingestion_confg(self) -> GithubUrlIngestionConfig:
@@ -28,7 +30,27 @@ class ConfigManager:
             raise ex
 
 
+    def get_store_embedding_vectordb_config(self) -> StoreEmbeddingVectorDBConfig:
+        """
+            Returns an instance of the `StoreEmbeddingVectorDBConfig` class with its attributes set based on the values obtained from the `params` and `config` files.
+
+            :return: An instance of the `StoreEmbeddingVectorDBConfig` class with its attributes set based on the values obtained from the `params` and `config` files.
+        """
+        try:
+            store_embedding_vectordb_config = StoreEmbeddingVectorDBConfig(
+                chunk_zise=self.params.embeddings.chunk_zise,
+                overlap=self.params.embeddings.overlap,
+                embedding_model_name=self.config.model.embedding_model,
+                github_dir=self.config.artifacts.data.github_data,
+                chromadb_dir=self.config.artifacts.vectordb.chromadb_dir
+            )
+            return store_embedding_vectordb_config
+
+        except Exception as ex:
+            raise ex
+        
+
 
 if __name__ == '__main__':
     config_manager = ConfigManager()
-    print(config_manager.get_github_url_ingestion_confg())
+    print(config_manager.get_store_embedding_vectordb_config())
