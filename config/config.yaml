@@ -1,0 +1,15 @@
+# logs:
+logs:
+  log_file: logs/logs.log
+
+# artifacts:
+artifacts:
+  artifacts_dir: artifacts
+  # data:
+  data:
+    data_dir: artifacts/data
+  # vector DB:
+  vectordb:
+    chromadb_dir: artifacts/chromadb
+  # chatdata:
+  chatdata: artifacts/chatdata.json
