@@ -51,6 +51,12 @@ class ConfigManager:
     
 
     def get_llm_config(self) -> LLMConfig:
+        """
+            Returns an instance of the LLMConfig class with its attributes set based on the values obtained from the params and config files.
+
+            :return: An instance of the LLMConfig class with its attributes set based on the values obtained from the params and config files.
+            :rtype: LLMConfig
+        """
         try:
             self.llm = LLMConfig(
                 llm=self.config.model.gemini_llm,
@@ -60,7 +66,7 @@ class ConfigManager:
             )
 
             return self.llm
-        
+
         except Exception as ex:
             raise ex
 

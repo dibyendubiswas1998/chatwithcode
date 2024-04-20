@@ -36,6 +36,15 @@ class StoreEmbeddingVectorDBConfig:
 
 @dataclass(frozen=True)
 class LLMConfig:
+    """
+        A data class that represents a configuration for a specific task.
+
+        Attributes:
+            llm (str): The LLM (Long-Short Term Memory) model.
+            temperature (float): The temperature.
+            max_length (int): The maximum length.
+            json_file (Path): The JSON file.
+    """
     llm: str
     temperature: float
     max_length: int
