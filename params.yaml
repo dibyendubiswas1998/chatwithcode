@@ -1,0 +1,3 @@
+embeddings:
+  chunk_zise: 2500
+  overlap: 500
