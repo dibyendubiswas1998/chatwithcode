@@ -1,12 +1,17 @@
 langchain==0.1.14
+langchain-community==0.0.34
 unstructured
 chromadb==0.4.22
 sentence-transformers==2.2.2
 langchain_google_genai==1.0.2
 GitPython
 python-box==6.0.2
+python-dotenv==1.0.1
+PyYAML
 flask
 Flask
 Flask-Cors
 ensure
+tqdm
+unstructured
 -e.
