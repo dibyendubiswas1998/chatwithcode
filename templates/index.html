@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../static/css/index.css">
+<link href="{{url_for('static', filename='css/index.css')}}" rel="stylesheet"/>
+<title>Souce Code Analysis</title>
+
+</head>
+<body>
+  
+<div class="chat-container">
+  <h1>Source Code Analysis (chat-with-code)</h1>
+  <form id="message-form" method="post" action="/get_url">
+    <span id="message-validation" style="padding-left: 2px; color: green;">{{sms}}</span> <!-- Span tag for validation messages -->
+    <br>
+    <input type="text" id="url" name="url" placeholder="Give the GitHub URL..." required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="chat-box" id="chat-box"></div>
+  <form id="message-form">
+    <div class="input-container">
+      <input type="text" id="user-input" placeholder="Type a message..." onkeydown="handleKeyPress(event)" required maxlength="64">
+      <button type="submit" onclick="sendMessage(event)">Send</button>
+      <button type="button" onclick="clearChat()">Clear</button>
+    </div>
+  </form>
+  
+  
+</div>
+
+<script src="../static/js/index.js"></script>
+<script src="{{url_for('static', filename='js/index.css')}}"></script>
+</body>
+</html>
