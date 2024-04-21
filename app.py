@@ -1,10 +1,8 @@
-from src.chatwithcode.utils.common_utils import log
 from src.chatwithcode.pipeline.chat_with_code import ChatWithCode
 from flask import Flask, render_template, request, jsonify
 
 
 app = Flask(__name__)
-log_file = "logs/logs.log"
 
 @app.route("/")
 def Home():
@@ -17,7 +15,6 @@ def Home():
     try:
         return render_template('index.html')
     except Exception as ex:
-        log(file_object=log_file, log_message=f"error will be {ex}")
         raise ex
     finally:
         return render_template('index.html')
@@ -50,7 +47,6 @@ def embedding_process():
         return render_template("index.html", sms=sms)
 
     except Exception as ex:
-        log(file_object=log_file, log_message=f"error will be {ex}")
         raise ex
     finally:
         return render_template("index.html", sms=sms)
@@ -80,8 +76,7 @@ def generate_response():
         return jsonify({"answer": answer})  # Return the answer as JSON
 
     except Exception as ex:
-        log(file_object=log_file, log_message=f"error will be {ex}")
-        raise ex
+       raise ex
 
 
 
