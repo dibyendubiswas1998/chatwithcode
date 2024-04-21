@@ -40,5 +40,59 @@
         "time": "01:42:41",
         "question": "explain the code?",
         "answer": "Unfortunately, I don't have the information to answer this question."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "10:26:01",
+        "question": "Tell me sonething about the project",
+        "answer": "Unfortunately, I don't have enough information to answer this question."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "10:26:45",
+        "question": "Tell me sonething about the project",
+        "answer": "This codebase is a template for a document tagging project. It includes a project structure, configuration files, and code for data preprocessing, model training, model evaluation, and prediction. The project is set up to use the Hugging Face Transformers library for natural language processing tasks.\n\n            The project structure consists of the following directories and files:\n\n            - `artifacts`: This directory contains subdirectories for storing data, models, and reports.\n            - `config`: This directory contains configuration files for the project, including `config.yaml` and `secrect.yaml`.\n            - `docs`: This directory is empty and can be used for documentation.\n            - `logs`: This file contains the running logs for the project.\n            - `main.py`: This file is the main entry point for the project.\n            - `requirements.txt`: This file contains the required Python packages for the project.\n            - `setup.py`: This file is used for installing the project.\n            - `src`: This directory contains the source code for the project, organized into subpackages.\n            - `templates`: This directory contains HTML templates for the project.\n            - `static`: This directory contains static files for the project, such as CSS and JavaScript files.\n\n            The code for data preprocessing, model training, model evaluation, and prediction is organized into the following modules:\n\n            - `data_ingestion`: This module is responsible for ingesting data from various sources.\n            - `data_preprocessing`: This module is responsible for preprocessing the data for model training.\n            - `data_loader`: This module is responsible for loading the data into the model.\n            - `model_training`: This module is responsible for training the model.\n            - `model_evaluation`: This module is responsible for evaluating the model.\n            - `prediction`: This module is responsible for making predictions using the trained model.\n\n            The project also includes a `config.yaml` file that contains the configuration parameters for the project. These parameters can be customized to suit the specific needs of the project.\n\n            Overall, this codebase provides a comprehensive template for a document tagging project using the Hugging Face Transformers library. It includes a well-organized project structure, configuration files, and code for data preprocessing, model training, model evaluation, and prediction."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "10:34:06",
+        "question": "What is Data Ingestion?",
+        "answer": "Unfortunately, I don't have the answer to your question."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "15:01:32",
+        "question": "Tell me something about DataIngestion?",
+        "answer": "The DataIngestion class is responsible for loading data from two datasets stored in an S3 bucket, concatenating them together, and saving the resulting dataframe to a local directory. It also logs various messages throughout the process."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "15:02:36",
+        "question": "WHi are you?",
+        "answer": "Unfortunately, I don't have enough information to answer this question."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "16:01:45",
+        "question": "who are you?",
+        "answer": "Unfortunately, I don't have the information to answer this question."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "16:02:06",
+        "question": "Tell me something about the project",
+        "answer": "Unfortunately, I don't have enough information to answer that question."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "16:02:26",
+        "question": "what is data ingestion?",
+        "answer": "Unfortunately, I don't have the information to answer this question."
+    },
+    {
+        "date": "2024-04-21",
+        "time": "16:03:26",
+        "question": "Tell me something about Data Ingestion?",
+        "answer": "Unfortunately, I don't have enough information about Data Ingestion from the provided context."
     }
 ]
