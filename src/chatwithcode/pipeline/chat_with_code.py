@@ -12,7 +12,7 @@ class ChatWithCode:
         self.log_file = "logs/logs.log"
         self.config_manager = ConfigManager()
     
-    def process(self, url:str):
+    def process(self, url:str) -> str:
         """
             Process the data from a GitHub repository, create a knowledge base, and store the embeddings.
 
@@ -42,6 +42,8 @@ class ChatWithCode:
             self.documents = self.emb.get_documents() # load data from given github directory
             self.chunks = self.emb.create_chunks(documents=self.documents) # create chunks of documents
             self.emb.create_knowledgebase(chunks=self.chunks) # create knowledgebase (store embedding to chromadb)
+
+            return "Successfully !!!"
 
         except Exception as ex:
             log(file_object=self.log_file, log_message=f"Error occurred: {ex}")
